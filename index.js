@@ -794,15 +794,8 @@
                 this.distanceMeter.setHighScore(this.highestScore);
             }
 
-            var url = "secret.php";
-            var params = "score=" + this.distanceRan;
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", url, true);
-
-            //Send the proper header information along with the request
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-            xhr.send(params);
+            var url = "index.php?score=" + this.distanceRan;
+            window.location.href = url;
 
             // Reset the time clock.
             this.time = getTimeStamp();

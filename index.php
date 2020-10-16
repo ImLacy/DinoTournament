@@ -9,11 +9,16 @@ if (isset($_POST["password"])){
     header("Location: index.php");
 }
 
+if (isset($_POST["username"])){
+    $list_pass[$_COOKIE['password']] = $_POST["username"];
+    file_put_contents('pass.json', json_encode($list_pass));
+}
+
 function getPassType($pass, $list_pass){
     if (!isset($_COOKIE['password'])){
         return null;
     } else {
-        if (in_array($_COOKIE['password'], $list_pass["pass"])){
+        if (isset($_COOKIE['password'], $list_pass)){
             return true;
         } else {
             return null;
@@ -68,7 +73,7 @@ if ($pass_type){
     }
     ?>
     <div id="messageBox" class="sendmessage">
-        <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">Quand tu seras prêt, appuie sur espace pour commencer</h1>
+        <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;"Bienvenue <?php echo $list_pass[$pass] ?><br>Quand tu seras prêt, appuie sur espace pour commencer</h1>
         <div class="niokbutton" onclick="okbuttonsend()"></div>
     </div>
     <div id="main-frame-error" class="interstitial-wrapper">

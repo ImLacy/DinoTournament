@@ -35,7 +35,7 @@ $json_var = json_decode(file_get_contents("var.json"), true); // get variables f
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Pseudo*" value="" />
+                                    <input type="text" class="form-control" name="username" placeholder="Pseudo*" value="" />
                                 </div>
                             </div>
                         </div>
