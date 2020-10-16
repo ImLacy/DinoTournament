@@ -18,7 +18,7 @@ $json_var = json_decode(file_get_contents("var.json"), true); // get variables f
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
-                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                <img src="assets/logo.png" alt=""/>
                 <h3><?php echo $json_var["title"] ?></h3>
                 <p></p>
                 <input type="submit" name="" value="Envoyer"/><br/>
@@ -30,12 +30,12 @@ $json_var = json_decode(file_get_contents("var.json"), true); // get variables f
                         <div class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Mot de passe*" name="password" value="" />
+                                    <input type="password" class="form-control" placeholder="Mot de passe*" name="password" value="" required/>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="username" placeholder="Pseudo*" value="" />
+                                    <input type="text" class="form-control" name="username" placeholder="Pseudo*" value="" required/>
                                 </div>
                             </div>
                         </div>

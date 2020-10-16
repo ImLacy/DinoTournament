@@ -3,10 +3,19 @@
  * found in the LICENSE file. */
 
 html, body {
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100%;
+}
+.incorrect-pass {
+  margin-top: 20%;
+  font-size: 300%;
+  margin-left: 20%;
+  text-align: center;
+  color: #9B0303;
+  border: #9B0303 double 2px;
+  padding-bottom: 0.5%;
 }
 
 .icon {
@@ -16,7 +25,7 @@ html, body {
 }
 
 .icon-offline {
-  content: -webkit-image-set( url(assets/default_100_percent/100-error-offline.png) 1x, url(assets/default_200_percent/200-error-offline.png) 2x);
+  content: -webkit-image-set( url(../assets/default_100_percent/100-error-offline.png) 1x, url(../assets/default_200_percent/200-error-offline.png) 2x);
   position: relative;
 }
 
